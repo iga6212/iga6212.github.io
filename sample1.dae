@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 3.3.0 commit date:2022-09-06, commit time:15:39, hash:0759f671ce1f</authoring_tool>
     </contributor>
-    <created>2023-01-28T13:41:08</created>
-    <modified>2023-01-28T13:41:08</modified>
+    <created>2023-01-28T13:58:10</created>
+    <modified>2023-01-28T13:58:10</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -116,10 +116,10 @@
             </accessor>
           </technique_common>
         </source>
-        <source id="Cube-mesh-map-0">
-          <float_array id="Cube-mesh-map-0-array" count="72">0.9578059 0.8951904 0.6540085 0.4938915 0.9578059 0.4938915 0.04641348 0.4938915 0.3502109 0.09259259 0.3502109 0.4938915 0.3502109 0.4938915 0.6540085 0.09259259 0.6540085 0.4938915 0.3502109 0.8951904 0.04641348 0.4938915 0.3502109 0.4938915 0.3502109 0.8951904 0.6540085 0.4938915 0.6540085 0.8951904 0.6540085 0.4938915 0.9578059 0.09259259 0.9578059 0.4938915 0.9578059 0.8951904 0.6540085 0.8951904 0.6540085 0.4938915 0.04641348 0.4938915 0.04641348 0.09259259 0.3502109 0.09259259 0.3502109 0.4938915 0.3502109 0.09259259 0.6540085 0.09259259 0.3502109 0.8951904 0.04641348 0.8951904 0.04641348 0.4938915 0.3502109 0.8951904 0.3502109 0.4938915 0.6540085 0.4938915 0.6540085 0.4938915 0.6540085 0.09259259 0.9578059 0.09259259</float_array>
+        <source id="Cube-mesh-map">
+          <float_array id="Cube-mesh-map-array" count="72">0.9578059 0.8951904 0.6540085 0.4938915 0.9578059 0.4938915 0.04641348 0.4938915 0.3502109 0.09259259 0.3502109 0.4938915 0.3502109 0.4938915 0.6540085 0.09259259 0.6540085 0.4938915 0.3502109 0.8951904 0.04641348 0.4938915 0.3502109 0.4938915 0.3502109 0.8951904 0.6540085 0.4938915 0.6540085 0.8951904 0.6540085 0.4938915 0.9578059 0.09259259 0.9578059 0.4938915 0.9578059 0.8951904 0.6540085 0.8951904 0.6540085 0.4938915 0.04641348 0.4938915 0.04641348 0.09259259 0.3502109 0.09259259 0.3502109 0.4938915 0.3502109 0.09259259 0.6540085 0.09259259 0.3502109 0.8951904 0.04641348 0.8951904 0.04641348 0.4938915 0.3502109 0.8951904 0.3502109 0.4938915 0.6540085 0.4938915 0.6540085 0.4938915 0.6540085 0.09259259 0.9578059 0.09259259</float_array>
           <technique_common>
-            <accessor source="#Cube-mesh-map-0-array" count="36" stride="2">
+            <accessor source="#Cube-mesh-map-array" count="36" stride="2">
               <param name="S" type="float"/>
               <param name="T" type="float"/>
             </accessor>
@@ -131,7 +131,7 @@
         <triangles material="Material-material" count="12">
           <input semantic="VERTEX" source="#Cube-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Cube-mesh-normals" offset="1"/>
-          <input semantic="TEXCOORD" source="#Cube-mesh-map-0" offset="2" set="0"/>
+          <input semantic="TEXCOORD" source="#Cube-mesh-map" offset="2" set="0"/>
           <p>4 0 0 2 0 1 0 0 2 2 1 3 7 1 4 3 1 5 6 2 6 5 2 7 7 2 8 1 3 9 7 3 10 5 3 11 0 4 12 3 4 13 1 4 14 4 5 15 1 5 16 5 5 17 4 0 18 6 0 19 2 0 20 2 1 21 6 1 22 7 1 23 6 2 24 4 2 25 5 2 26 1 3 27 3 3 28 7 3 29 0 4 30 2 4 31 3 4 32 4 5 33 0 5 34 1 5 35</p>
         </triangles>
       </mesh>
@@ -216,6 +216,10 @@
   </library_animations>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
+      <node id="Light" name="Light" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light-light"/>
+      </node>
       <node id="Armature" name="Armature" type="NODE">
         <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
         <node id="Armature_Bone" name="Bone" sid="Bone" type="JOINT">
@@ -242,10 +246,6 @@
             </bind_material>
           </instance_controller>
         </node>
-      </node>
-      <node id="Light" name="Light" type="NODE">
-        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
-        <instance_light url="#Light-light"/>
       </node>
     </visual_scene>
   </library_visual_scenes>
