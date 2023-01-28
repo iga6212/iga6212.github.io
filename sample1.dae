@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 3.3.0 commit date:2022-09-06, commit time:15:39, hash:0759f671ce1f</authoring_tool>
     </contributor>
-    <created>2023-01-28T10:09:02</created>
-    <modified>2023-01-28T10:09:02</modified>
+    <created>2023-01-28T10:14:57</created>
+    <modified>2023-01-28T10:14:57</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -54,14 +54,14 @@
   <library_effects>
     <effect id="Material_001-effect">
       <profile_COMMON>
-        <newparam sid="wood1_png-surface">
+        <newparam sid="https___iga6212_github_io_wood1_png-surface">
           <surface type="2D">
-            <init_from>wood1_png</init_from>
+            <init_from>https___iga6212_github_io_wood1_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="wood1_png-sampler">
+        <newparam sid="https___iga6212_github_io_wood1_png-sampler">
           <sampler2D>
-            <source>wood1_png-surface</source>
+            <source>https___iga6212_github_io_wood1_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -70,7 +70,7 @@
               <color sid="emission">0 0.01549571 0.09284735 1</color>
             </emission>
             <diffuse>
-              <texture texture="wood1_png-sampler" texcoord="Cube-mesh-map-0"/>
+              <texture texture="https___iga6212_github_io_wood1_png-sampler" texcoord="Cube-mesh-map-0"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -80,11 +80,7 @@
       </profile_COMMON>
     </effect>
   </library_effects>
-  <library_images>
-    <image id="wood1_png" name="wood1_png">
-      <init_from>https://iga6212.github.io/wood1.png</init_from>
-    </image>
-  </library_images>
+  <library_images/>
   <library_materials>
     <material id="Material_001-material" name="Material.001">
       <instance_effect url="#Material_001-effect"/>
