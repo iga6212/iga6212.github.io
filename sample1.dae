@@ -85,7 +85,7 @@
   </library_effects>
   <library_images>
     <image id="wood1_png" name="wood1_png">
-      <init_from>wood1.png</init_from>
+      <init_from>https://iga6212.github.io/wood1.png</init_from>
     </image>
   </library_images>
   <library_materials>
