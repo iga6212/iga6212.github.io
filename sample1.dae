@@ -56,7 +56,7 @@
       <profile_COMMON>
         <newparam sid="https___iga6212_github_io_wood1_png-surface">
           <surface type="2D">
-            <init_from>https___iga6212_github_io_wood1_png</init_from>
+            <init_from>https://iga6212.github.io/wood1_png</init_from>
           </surface>
         </newparam>
         <newparam sid="https___iga6212_github_io_wood1_png-sampler">
